@@ -8,5 +8,7 @@ catboost
 xgboost
 setuptools
 datetime
-
--e .
+pymysql
+python-dotenv
+mysql-connector-python
+scikit-learn
