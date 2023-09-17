@@ -4,7 +4,8 @@ from src.mlproject01.exception import CustomException
 from src.mlproject01.logger import logging
 import pandas as pd
 import pymysql
-
+import pickle
+import numpy as np
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -33,4 +34,17 @@ def read_sql_data():
 
     except Exception as e:
         raise CustomException(e, sys)
+
+def save_object(filepath,obj):
+    try:
+        dir_path=os.path.dirname(filepath)
+
+        os.makedirs(dir_path,exist_ok=True)
+
+        with open(filepath,"wb") as file_obj:
+            pickle.dump(obj,file_obj)
+
+
+    except Exception as e:
+        raise CustomException(e,sys)
 
