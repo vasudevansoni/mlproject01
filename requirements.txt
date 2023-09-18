@@ -14,4 +14,4 @@ mysql-connector-python
 ipykernel
 pipeline
 sklearn
-# pickle5
+-e .
